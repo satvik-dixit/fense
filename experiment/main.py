@@ -7,50 +7,84 @@ from tqdm import tqdm
 import sys
 sys.path.append('../caption-evaluation-tools')
 from sentence_transformers import SentenceTransformer, CrossEncoder
-from bert_score import BERTScorer
-from bleurt import score as bleurt_score
+# from bert_score import BERTScorer
+# from bleurt import score as bleurt_score
 from eval_metrics import evaluate_metrics_from_lists
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 from dataloader import get_former, get_latter
+from msclap import CLAP
 
-model_sb = SentenceTransformer('paraphrase-TinyBERT-L6-v2', device='cuda:1')
+model_sb = SentenceTransformer('paraphrase-TinyBERT-L6-v2', device='cuda:0')
 model_sb.eval()
 
-scorer_bs = BERTScorer(model_type='ramsrigouthamg/t5_paraphraser', lang="en", rescale_with_baseline=False, device='cuda:3')
-
-scorer_brt = bleurt_score.BleurtScorer()
-
-# os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
+clap_model = CLAP(version='2023', use_cuda=True)  # Assuming you want to use GPU
 
 def cosine_similarity(input, target):
     from torch.nn import CosineSimilarity
     cos = CosineSimilarity(dim=0, eps=1e-6)
     return cos(input, target).item()
-    
-def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', average=True):
+
+def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', average=True, audio_files=None, dataset_name='audiocaps'):
     N = len(all_preds_text)
     K = len(all_refs_text[0])
     all_preds_text = np.array(all_preds_text, dtype=str)
     all_refs_text = np.array(all_refs_text, dtype=str)
 
-    score = torch.zeros((N, K))
+    print('all_preds_text shape:', all_preds_text)
+    print('all_refs_text shape:', all_refs_text)
+
+    if method=='sentence-bert' or method=='ms-CLAP':
+        score = torch.zeros((N, K))
+    else:
+        score = torch.zeros((N, 1))
+
+    # For Sentence-BERT
     if method == 'sentence-bert':
         preds_sb = torch.Tensor(model_sb.encode(all_preds_text))
         refs_sb = torch.Tensor(np.array([model_sb.encode(x) for x in all_refs_text]))
-        # refs_sb = refs_sb.mean(dim=1)
         for i in range(K):
             score[:,i] = torch.Tensor([cosine_similarity(input, target) for input, target in zip(preds_sb, refs_sb[:,i])])
-    elif method == 'bert-score':
+    
+   # For CLAP
+    elif method == 'ms-CLAP':
+        # preds_clap = clap_model.get_text_embeddings(all_preds_text.tolist()).to('cuda')
+        # print('shape 1:', preds_clap.shape)
+        preds_clap = torch.stack([clap_model.get_text_embeddings([pred]).to('cuda') for pred in all_preds_text], dim=0).squeeze()
+        print('preds_clap shape:', preds_clap.shape)
+        refs_clap = torch.stack([clap_model.get_text_embeddings(refs).to('cuda') for refs in all_refs_text], dim=0)
+        print('refs_clap shape:', refs_clap.shape)
         for i in range(K):
-            P, R, F1 = scorer_bs.score(all_preds_text.tolist(), all_refs_text[:,i].tolist())
-            score[:,i] = F1
-    elif method == 'bleurt':
-        for i in range(K):
-            scores = scorer_brt.score(references=all_refs_text[:,i], candidates=all_preds_text)
-            score[:,i] = torch.Tensor(scores).sigmoid()
+            score[:, i] = torch.Tensor([cosine_similarity(input, target) for input, target in zip(preds_clap, refs_clap[:, i])])
+        print('score:', score)
 
+    # For Audio CLAP
+    elif method == 'ms_clap_audio_caption':
+        if audio_files is None:
+            raise ValueError("Audio files must be provided for ms_clap_audio_caption.")
+        # preds_clap = clap_model.get_text_embeddings(all_preds_text.tolist()).to('cuda')
+        preds_clap = torch.stack([clap_model.get_text_embeddings([pred]).to('cuda') for pred in all_preds_text], dim=0).squeeze()
+        print('preds_clap shape:', preds_clap.shape)
+        if dataset_name=='clotho':
+            audio_files = [f'/content/fense/clotho_caption_eval/{audio}' for audio in audio_files]
+        elif dataset_name=='audiocaps':
+            audio_files = [f'/content/fense/audiocaps_caption_eval/{audio}.wav' for audio in audio_files]
+        print('audio_files:', audio_files)
+        # audio_embs = [clap_model.get_audio_embeddings(audio_files)]
+        audio_embs = torch.stack([clap_model.get_audio_embeddings([audio_file]).to('cuda') for audio_file in audio_files], dim=0)
+        # audio_embs = audio_embs.squeeze()
+        print('audio_embs shape:', audio_embs.shape)
+        for i in range(1):
+            score[:, i] = torch.Tensor([cosine_similarity(input, target) for input, target in zip(preds_clap, audio_embs[:, i])])
+        print('score:', score)
+        print('score shape:', score.shape)
+
+    
+
+    # Calculate average or max score
     score = score.mean(dim=1) if average else score.max(dim=1)[0]
+    print('avg_score:', score)
+    print('avg_score shape:', score.shape)
 
     return score
 
@@ -81,21 +115,24 @@ def print_accuracy(machine_score, human_score):
     print("total acc: %.1f" % (acc*100))
     return results
 
-if __name__ == '__main__':
-    for dataset in ['audiocaps', 'clotho']:
-        score, score0, score1 = {}, {}, {}
 
+if __name__ == '__main__':
+    for dataset in ['audiocaps']:
+        score, score0, score1 = {}, {}, {}
         mm_score, mm_score0, mm_score1 = {}, {}, {}
 
-        hh_preds_text0, hh_preds_text1, hh_refs_text0, hh_refs_text1, hh_human_truth = get_former(dataset)
-        mm_preds_text0, mm_preds_text1, mm_refs_text, mm_human_truth = get_latter(dataset)
+        hh_preds_text0, hh_preds_text1, hh_refs_text0, hh_refs_text1, hh_human_truth, hh_audio_files = get_former(dataset)
+        print('hh_audio_files', hh_audio_files)
+        mm_preds_text0, mm_preds_text1, mm_refs_text, mm_human_truth, mm_audio_files = get_latter(dataset)
+        print('mm_audio_files', mm_audio_files)
 
-        for metric in ['sentence-bert', 'bleurt', 'bert-score']:
-            score0[metric] = get_text_score(hh_preds_text0, hh_refs_text0, metric)
-            score1[metric] = get_text_score(hh_preds_text1, hh_refs_text1, metric)
+        # Iterate through both embedding methods: Sentence-BERT and CLAP and CLAP_audio_caption
+        for metric in ['ms_clap_audio_caption', 'sentence-bert', 'ms-CLAP']:
+            score0[metric] = get_text_score(hh_preds_text0, hh_refs_text0, metric, audio_files=hh_audio_files, dataset_name=dataset)
+            score1[metric] = get_text_score(hh_preds_text1, hh_refs_text1, metric, audio_files=hh_audio_files, dataset_name=dataset)
 
-            mm_score0[metric] = get_text_score(mm_preds_text0, mm_refs_text, metric)
-            mm_score1[metric] = get_text_score(mm_preds_text1, mm_refs_text, metric)
+            mm_score0[metric] = get_text_score(mm_preds_text0, mm_refs_text, metric, audio_files=mm_audio_files, dataset_name=dataset)
+            mm_score1[metric] = get_text_score(mm_preds_text1, mm_refs_text, metric, audio_files=mm_audio_files, dataset_name=dataset)
 
         total_score0, total_score1, total_score = {}, {}, {}
         for metric in score0:
@@ -127,7 +164,7 @@ if __name__ == '__main__':
         def shrink(arr, repeat=5):
             return np.array(arr).reshape(-1, repeat).mean(axis=1).tolist()
 
-        baseline_list = ['Bleu_1','Bleu_2','Bleu_3','Bleu_4','METEOR','ROUGE_L','CIDEr','SPICE','SPIDEr']
+        baseline_list = ['Bleu_1','Bleu_2','Bleu_3','Bleu_4','METEOR','ROUGE_L','CIDEr', 'SPICE', 'SPIDEr']
         for metric in baseline_list:
             total_score0[metric] = torch.Tensor(get_score_list(per_file_metrics0, metric) + shrink(get_score_list(mm_per_file_metrics0, metric)))
             total_score1[metric] = torch.Tensor(get_score_list(per_file_metrics1, metric) + shrink(get_score_list(mm_per_file_metrics1, metric)))
