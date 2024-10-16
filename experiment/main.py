@@ -31,8 +31,9 @@ def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', averag
     all_preds_text = np.array(all_preds_text, dtype=str)
     all_refs_text = np.array(all_refs_text, dtype=str)
 
-    print('all_preds_text shape:', all_preds_text)
-    print('all_refs_text shape:', all_refs_text)
+    print('all_preds_text shape:', len(all_preds_text))
+    print('all_refs_text shape:', len(all_refs_text))
+    print('all_refs_text shape:', len(all_refs_text[0]))
 
     if method=='sentence-bert' or method=='ms-CLAP':
         score = torch.zeros((N, K))
@@ -66,7 +67,7 @@ def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', averag
         preds_clap = torch.stack([clap_model.get_text_embeddings([pred]).to('cuda') for pred in all_preds_text], dim=0).squeeze()
         print('preds_clap shape:', preds_clap.shape)
         if dataset_name=='clotho':
-            audio_files = [f'/content/fense/clotho_caption_eval/{audio}' for audio in audio_files]
+            audio_files = [f'/content/fense/clotho_eval_audio/{audio}' for audio in audio_files]
         elif dataset_name=='audiocaps':
             audio_files = [f'/content/fense/audiocaps_caption_eval/{audio}.wav' for audio in audio_files]
         print('audio_files:', audio_files)
@@ -117,7 +118,7 @@ def print_accuracy(machine_score, human_score):
 
 
 if __name__ == '__main__':
-    for dataset in ['audiocaps']:
+    for dataset in ['clotho']:
         score, score0, score1 = {}, {}, {}
         mm_score, mm_score0, mm_score1 = {}, {}, {}
 
