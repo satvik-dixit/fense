@@ -53,8 +53,8 @@ def get_former(dataset='clotho'):
                 truth = np.sum([x for x in audio[facet][-1]])
                 hh_preds_text0.append(audio[facet][0])
                 hh_preds_text1.append(audio[facet][1])
-                hh_refs_text0.append([audio[facet][0]])
-                hh_refs_text1.append([x for x in captions if x != audio[facet][0]])
+                # hh_refs_text0.append([audio[facet][0]])
+                # hh_refs_text1.append([x for x in captions if x != audio[facet][0]])
                 hh_human_truth.append(truth)
 
                 if dataset=='audiocaps':
