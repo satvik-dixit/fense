@@ -80,7 +80,6 @@ def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', averag
         print('score:', score)
         print('score shape:', score.shape)
 
-    
 
     # Calculate average or max score
     score = score.mean(dim=1) if average else score.max(dim=1)[0]
@@ -98,6 +97,43 @@ def get_accuracy(machine_score, human_score, threshold=0):
         if ms*hs > 0 or abs(ms-hs) < threshold:
             cnt += 1
     return cnt / N
+
+import csv
+
+# def print_accuracy(machine_score, human_score, csv_filename="accuracy_results.csv"):
+#     results = []
+#     data_to_save = []  # Prepare a list for data to save in CSV
+
+#     for i, facet in enumerate(['HC', 'HI', 'HM', 'MM']):
+#         if facet != 'MM':
+#             sub_score = machine_score[i*250:(i+1)*250]
+#             sub_truth = human_score[i*250:(i+1)*250]
+#         else:
+#             sub_score = machine_score[i*250:]
+#             sub_truth = human_score[i*250:]
+
+#         acc = get_accuracy(sub_score, sub_truth)
+#         results.append(round(acc * 100, 1))
+        
+#         # Print the accuracy for each facet
+#         print(facet, "%.1f" % (acc * 100))
+
+#         # Store the data for each facet in the list for CSV
+#         for score, truth in zip(sub_score, sub_truth):
+#             data_to_save.append([facet, score, truth])
+
+#     # Calculate total accuracy and print it
+#     acc = get_accuracy(machine_score, human_score)
+#     results.append(round(acc * 100, 1))
+#     print("total acc: %.1f" % (acc * 100))
+
+#     # Save the data to CSV file
+#     with open(csv_filename, mode='w', newline='') as file:
+#         writer = csv.writer(file)
+#         writer.writerow(['facet', 'subscore', 'subtruth'])  # CSV header
+#         writer.writerows(data_to_save)  # Write all data rows
+
+#     return results
 
 def print_accuracy(machine_score, human_score):
     results = []
@@ -118,7 +154,7 @@ def print_accuracy(machine_score, human_score):
 
 
 if __name__ == '__main__':
-    for dataset in ['clotho']:
+    for dataset in ['audiocaps', 'clotho']:
         score, score0, score1 = {}, {}, {}
         mm_score, mm_score0, mm_score1 = {}, {}, {}
 
@@ -128,7 +164,7 @@ if __name__ == '__main__':
         print('mm_audio_files', mm_audio_files)
 
         # Iterate through both embedding methods: Sentence-BERT and CLAP and CLAP_audio_caption
-        for metric in ['ms_clap_audio_caption', 'sentence-bert', 'ms-CLAP']:
+        for metric in ['ms-CLAP', 'sentence-bert', 'ms_clap_audio_caption']:
             score0[metric] = get_text_score(hh_preds_text0, hh_refs_text0, metric, audio_files=hh_audio_files, dataset_name=dataset)
             score1[metric] = get_text_score(hh_preds_text1, hh_refs_text1, metric, audio_files=hh_audio_files, dataset_name=dataset)
 
@@ -189,19 +225,47 @@ if __name__ == '__main__':
         probs0 = np.load('../bert_for_fluency/cache/probs0_alltrain_{}.npy'.format(dataset))
         probs1 = np.load('../bert_for_fluency/cache/probs1_alltrain_{}.npy'.format(dataset))
 
-        score_penalty = {}
-        thres = 0.9
         coef = 0.9
+        thresholds = np.arange(0.0, 1.05, 0.05)
+        results_df = pd.DataFrame(columns=['Method', 'Threshold', 'HC', 'HI', 'HM', 'MM', 'Total'])
 
         for method in total_score:
-            score_penalty[method] = [s1-s1*coef*(p1>thres)-(s2-s2*coef*(p2>thres)) for s1,s2,p1,p2 in zip(total_score0[method],total_score1[method],probs0[:,-1],probs1[:,-1])]
+            for thres in thresholds:
+                score_penalty = [s1-s1*coef*(p1>thres)-(s2-s2*coef*(p2>thres)) for s1,s2,p1,p2 in zip(total_score0[method],total_score1[method],probs0[:,-1],probs1[:,-1])]
+                
+                print(f"Method: {method}, Threshold: {thres:.2f}")
+                tmp = print_accuracy(score_penalty, total_human_truth)
+                
+                results_df = results_df.append({
+                    'Method': method,
+                    'Threshold': thres,
+                    'HC': tmp[0],
+                    'HI': tmp[1],
+                    'HM': tmp[2],
+                    'MM': tmp[3],
+                    'Total': tmp[4]
+                }, ignore_index=True)
 
-        results = []
-        for method in score_penalty:
-            print(method)
-            tmp = print_accuracy(score_penalty[method], total_human_truth)
-            results.append(tmp)
+        results_df.to_csv(f'fluency_varied_thresholds_{dataset}.csv', index=False)
 
-        df = pd.DataFrame(results, columns=['HC', 'HI', 'HM', 'MM', 'total'])
-        df.index = [x for x in total_score]
-        df.to_csv('fluency_{}.csv'.format(dataset))
+
+        # # load pre-computed ndarray 
+        # probs0 = np.load('../bert_for_fluency/cache/probs0_alltrain_{}.npy'.format(dataset))
+        # probs1 = np.load('../bert_for_fluency/cache/probs1_alltrain_{}.npy'.format(dataset))
+
+        # score_penalty = {}
+        # thres = 0.9
+        # coef = 0.9
+
+        # for method in total_score:
+        #     score_penalty[method] = [s1-s1*coef*(p1>thres)-(s2-s2*coef*(p2>thres)) for s1,s2,p1,p2 in zip(total_score0[method],total_score1[method],probs0[:,-1],probs1[:,-1])]
+
+        # results = []
+        # for method in score_penalty:
+        #     print(method)
+        #     tmp = print_accuracy(score_penalty[method], total_human_truth)
+        #     results.append(tmp)
+
+        # df = pd.DataFrame(results, columns=['HC', 'HI', 'HM', 'MM', 'total'])
+        # df.index = [x for x in total_score]
+        # df.to_csv('fluency_{}.csv'.format(dataset))
