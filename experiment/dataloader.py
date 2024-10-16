@@ -23,6 +23,17 @@ def swap_position(arr):
         ret += [v for k,v in enumerate(arr) if k%3==i]
     return ret
 
+def get_audio_files(dataset='clotho'):
+    assert dataset in {'audiocaps', 'clotho'}
+    audio_files = []
+    
+    anno = anno_clotho if dataset == 'clotho' else anno_audiocaps
+    
+    for audio in anno:
+        audio_files.append(audio['audio_id'])
+    
+    return audio_files
+
 def get_former(dataset='clotho'):
     assert dataset in {'audiocaps', 'clotho'}
     hh_human_truth = []
@@ -30,9 +41,10 @@ def get_former(dataset='clotho'):
     hh_preds_text1 = []
     hh_refs_text0 = []
     hh_refs_text1 = []
+    hh_audio_files = []
 
     anno = anno_clotho if dataset == 'clotho' else anno_audiocaps
-    
+
     for audio in tqdm(anno):
         captions = audio["references"]
         for facet in ["HC", "HI", "HM"]:
@@ -40,13 +52,14 @@ def get_former(dataset='clotho'):
                 truth = np.sum([x for x in audio[facet][-1]])
                 hh_preds_text0.append(audio[facet][0])
                 hh_preds_text1.append(audio[facet][1])
+                hh_refs_text0.append([audio[facet][0]])
+                hh_refs_text1.append([x for x in captions if x != audio[facet][0]])
                 hh_human_truth.append(truth)
-                if facet == "HC":
-                    hh_refs_text0.append([x for x in captions if x != audio[facet][0]])
-                    hh_refs_text1.append([x for x in captions if x != audio[facet][1]])
-                elif facet == "HI" or facet == "HM":
-                    hh_refs_text0.append([x for x in captions if x != audio[facet][0]])
-                    hh_refs_text1.append([x for x in captions if x != audio[facet][0]])   
+                if dataset=='audiocaps':
+                    hh_audio_files.append(audio['audio_id'])
+                else:
+                    hh_audio_files.append(audio['raw_name'])
+                    
             except:
                 continue
 
@@ -58,7 +71,8 @@ def get_former(dataset='clotho'):
     hh_refs_text0 = swap_position(hh_refs_text0)
     hh_refs_text1 = swap_position(hh_refs_text1)
     hh_human_truth = swap_position(hh_human_truth)
-    return hh_preds_text0, hh_preds_text1, hh_refs_text0, hh_refs_text1, hh_human_truth
+    hh_audio_files = swap_position(hh_audio_files)
+    return hh_preds_text0, hh_preds_text1, hh_refs_text0, hh_refs_text1, hh_human_truth, hh_audio_files
 
 def get_latter(dataset='clotho'):
     assert dataset in {'audiocaps', 'clotho'}
@@ -66,6 +80,7 @@ def get_latter(dataset='clotho'):
     mm_preds_text0 = []
     mm_preds_text1 = []
     mm_refs_text = []
+    mm_audio_files = []
 
     anno = anno_clotho if dataset == 'clotho' else anno_audiocaps
 
@@ -78,20 +93,26 @@ def get_latter(dataset='clotho'):
                 mm_preds_text1.append(audio[facet][1])
                 mm_refs_text.append(captions)
                 mm_human_truth.append(truth)
+                mm_audio_files.append(audio['audio_id'])
             except:
                 continue
 
-    return mm_preds_text0, mm_preds_text1, mm_refs_text, mm_human_truth
+    return mm_preds_text0, mm_preds_text1, mm_refs_text, mm_human_truth, mm_audio_files
 
 if __name__ == '__main__':
-    all_preds_text0, all_preds_text1, all_refs_text0, all_refs_text1, all_human_truth = get_former('audiocaps')
-    mm_preds_text0, mm_preds_text1, mm_refs_text, mm_human_truth = get_latter('audiocaps')
+    all_preds_text0, all_preds_text1, all_refs_text0, all_refs_text1, all_human_truth, all_audio_files = get_former('audiocaps')
+    mm_preds_text0, mm_preds_text1, mm_refs_text, mm_human_truth, mm_audio_files = get_latter('audiocaps')
 
     print(len(all_human_truth))
+    print(len(all_audio_files))
+    print(len(mm_audio_files))
 
-    # import pdb; pdb.set_trace()
     print(np.array(all_refs_text0, dtype=str).shape)
     print(np.array(mm_preds_text0, dtype=str).shape)
 
+    # Combine audio files
+    total_audio_files = all_audio_files + mm_audio_files
+
     # np.save('total_preds_audiocaps0.npy', all_preds_text0 + mm_preds_text0)
     # np.save('total_preds_audiocaps1.npy', all_preds_text1 + mm_preds_text1)
+    # np.save('total_audio_files_audiocaps.npy', total_audio_files)
