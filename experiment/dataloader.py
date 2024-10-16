@@ -1,5 +1,6 @@
 import json
 import numpy as np
+from torch import mm
 from tqdm import tqdm
 import pandas as pd
 
@@ -55,11 +56,18 @@ def get_former(dataset='clotho'):
                 hh_refs_text0.append([audio[facet][0]])
                 hh_refs_text1.append([x for x in captions if x != audio[facet][0]])
                 hh_human_truth.append(truth)
+
                 if dataset=='audiocaps':
                     hh_audio_files.append(audio['audio_id'])
                 else:
                     hh_audio_files.append(audio['raw_name'])
-                    
+
+                if facet == "HC":
+                    hh_refs_text0.append([x for x in captions if x != audio[facet][0]])
+                    hh_refs_text1.append([x for x in captions if x != audio[facet][1]])
+                elif facet == "HI" or facet == "HM":
+                    hh_refs_text0.append([x for x in captions if x != audio[facet][0]])
+                    hh_refs_text1.append([x for x in captions if x != audio[facet][0]])   
             except:
                 continue
 
@@ -93,7 +101,12 @@ def get_latter(dataset='clotho'):
                 mm_preds_text1.append(audio[facet][1])
                 mm_refs_text.append(captions)
                 mm_human_truth.append(truth)
-                mm_audio_files.append(audio['audio_id'])
+
+                if dataset=='audiocaps':
+                    mm_audio_files.append(audio['audio_id'])
+                else:
+                    mm_audio_files.append(audio['raw_name'])
+                    
             except:
                 continue
 
