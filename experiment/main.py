@@ -227,25 +227,36 @@ if __name__ == '__main__':
 
         coef = 0.9
         thresholds = np.arange(0.0, 1.05, 0.05)
-        results_df = pd.DataFrame(columns=['Method', 'Threshold', 'HC', 'HI', 'HM', 'MM', 'Total'])
+        results = []  # List to store rows
 
         for method in total_score:
             for thres in thresholds:
-                score_penalty = [s1-s1*coef*(p1>thres)-(s2-s2*coef*(p2>thres)) for s1,s2,p1,p2 in zip(total_score0[method],total_score1[method],probs0[:,-1],probs1[:,-1])]
+                # Calculate score_penalty using list comprehension
+                score_penalty = [
+                    s1 - s1 * coef * (p1 > thres) - (s2 - s2 * coef * (p2 > thres)) 
+                    for s1, s2, p1, p2 in zip(total_score0[method], total_score1[method], probs0[:, -1], probs1[:, -1])
+                ]
                 
                 print(f"Method: {method}, Threshold: {thres:.2f}")
-                tmp = print_accuracy(score_penalty, total_human_truth)
                 
-                results_df = results_df.append({
+                # Get performance metrics from print_accuracy
+                hc, hi, hm, mm, total = print_accuracy(score_penalty, total_human_truth)
+                
+                # Append to results list
+                results.append({
                     'Method': method,
                     'Threshold': thres,
-                    'HC': tmp[0],
-                    'HI': tmp[1],
-                    'HM': tmp[2],
-                    'MM': tmp[3],
-                    'Total': tmp[4]
-                }, ignore_index=True)
+                    'HC': hc,
+                    'HI': hi,
+                    'HM': hm,
+                    'MM': mm,
+                    'Total': total
+                })
 
+        # Convert results list to DataFrame
+        results_df = pd.DataFrame(results)
+
+        # Save DataFrame to CSV
         results_df.to_csv(f'fluency_varied_thresholds_{dataset}.csv', index=False)
 
 
