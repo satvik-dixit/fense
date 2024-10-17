@@ -14,11 +14,15 @@ import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 from dataloader import get_former, get_latter
 from msclap import CLAP
+import laion_clap
 
 model_sb = SentenceTransformer('paraphrase-TinyBERT-L6-v2', device='cuda:0')
 model_sb.eval()
 
-clap_model = CLAP(version='2023', use_cuda=True)  # Assuming you want to use GPU
+clap_model = CLAP(version='2023', use_cuda=True)  
+
+laion_clap_model = laion_clap.CLAP_Module(enable_fusion=False)
+laion_clap_model.load_ckpt()
 
 def cosine_similarity(input, target):
     from torch.nn import CosineSimilarity
@@ -35,7 +39,7 @@ def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', averag
     print('all_refs_text shape:', len(all_refs_text))
     print('all_refs_text shape:', len(all_refs_text[0]))
 
-    if method=='sentence-bert' or method=='ms-CLAP':
+    if method=='sentence-bert' or method=='ms-CLAP' or method=='laion-CLAP':
         score = torch.zeros((N, K))
     else:
         score = torch.zeros((N, 1))
@@ -59,6 +63,18 @@ def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', averag
             score[:, i] = torch.Tensor([cosine_similarity(input, target) for input, target in zip(preds_clap, refs_clap[:, i])])
         print('score:', score)
 
+   # For LAION CLAP
+    elif method == 'laion-CLAP':
+        # preds_clap = clap_model.get_text_embeddings(all_preds_text.tolist()).to('cuda')
+        # print('shape 1:', preds_clap.shape)
+        preds_clap = torch.stack([laion_clap_model.get_text_embedding([pred], use_tensor=True).to('cuda') for pred in all_preds_text], dim=0).squeeze()
+        print('laion preds_clap shape:', preds_clap.shape)
+        refs_clap = torch.stack([laion_clap_model.get_text_embeddings(refs, use_tensor=True).to('cuda') for refs in all_refs_text], dim=0)
+        print('laion refs_clap shape:', refs_clap.shape)
+        for i in range(K):
+            score[:, i] = torch.Tensor([cosine_similarity(input, target) for input, target in zip(preds_clap, refs_clap[:, i])])
+        print('laion score:', score)
+
     # For Audio CLAP
     elif method == 'ms_clap_audio_caption':
         if audio_files is None:
@@ -80,6 +96,26 @@ def get_text_score(all_preds_text, all_refs_text, method='sentence-bert', averag
         print('score:', score)
         print('score shape:', score.shape)
 
+    # For LAION Audio CLAP
+    elif method == 'laion_clap_audio_caption':
+        if audio_files is None:
+            raise ValueError("Audio files must be provided for laion_clap_audio_caption.")
+        # preds_clap = clap_model.get_text_embeddings(all_preds_text.tolist()).to('cuda')
+        preds_clap = torch.stack([laion_clap_model.get_text_embeddings([pred]).to('cuda') for pred in all_preds_text], dim=0).squeeze()
+        print('preds_clap shape:', preds_clap.shape)
+        if dataset_name=='clotho':
+            audio_files = [f'/content/fense/clotho_eval_audio/{audio}' for audio in audio_files]
+        elif dataset_name=='audiocaps':
+            audio_files = [f'/content/fense/audiocaps_caption_eval/{audio}.wav' for audio in audio_files]
+        print('audio_files:', audio_files)
+        # audio_embs = [clap_model.get_audio_embeddings(audio_files)]
+        audio_embs = torch.stack([laion_clap_model.get_audio_embedding_from_filelist([audio_file], use_tensor=True).to('cuda') for audio_file in audio_files], dim=0)
+        # audio_embs = audio_embs.squeeze()
+        print('laion_clap audio_embs shape:', audio_embs.shape)
+        for i in range(1):
+            score[:, i] = torch.Tensor([cosine_similarity(input, target) for input, target in zip(preds_clap, audio_embs[:, i])])
+        print('laion_clap audio score:', score)
+        print('laion_clap audio score shape:', score.shape)
 
     # Calculate average or max score
     score = score.mean(dim=1) if average else score.max(dim=1)[0]
@@ -164,12 +200,23 @@ if __name__ == '__main__':
         print('mm_audio_files', mm_audio_files)
 
         # Iterate through both embedding methods: Sentence-BERT and CLAP and CLAP_audio_caption
-        for metric in ['ms-CLAP', 'sentence-bert', 'ms_clap_audio_caption']:
+        for metric in ['laion_clap_audio_caption', 'laion-CLAP', 'ms_clap_audio_caption', 'ms-CLAP', 'sentence-bert']:
             score0[metric] = get_text_score(hh_preds_text0, hh_refs_text0, metric, audio_files=hh_audio_files, dataset_name=dataset)
             score1[metric] = get_text_score(hh_preds_text1, hh_refs_text1, metric, audio_files=hh_audio_files, dataset_name=dataset)
 
             mm_score0[metric] = get_text_score(mm_preds_text0, mm_refs_text, metric, audio_files=mm_audio_files, dataset_name=dataset)
             mm_score1[metric] = get_text_score(mm_preds_text1, mm_refs_text, metric, audio_files=mm_audio_files, dataset_name=dataset)
+
+        score0['clap_combined'] = (score0['ms_clap_audio_caption'] + score0['ms-CLAP'])/2
+        score1['clap_combined'] = (score1['ms_clap_audio_caption'] + score1['ms-CLAP'])/2
+        mm_score0['clap_combined'] = (mm_score0['ms_clap_audio_caption'] + mm_score0['ms-CLAP'])/2
+        mm_score1['clap_combined'] = (mm_score1['ms_clap_audio_caption'] + mm_score1['ms-CLAP'])/2
+
+        score0['laion_clap_combined'] = (score0['laion_clap_audio_caption'] + score0['laion-CLAP'])/2
+        score1['laion_clap_combined'] = (score1['laion_clap_audio_caption'] + score1['laion-CLAP'])/2
+        mm_score0['laion_clap_combined'] = (mm_score0['laion_clap_audio_caption'] + mm_score0['laion-CLAP'])/2
+        mm_score1['laion_clap_combined'] = (mm_score1['laion_clap_audio_caption'] + mm_score1['laion-CLAP'])/2
+
 
         total_score0, total_score1, total_score = {}, {}, {}
         for metric in score0:
@@ -226,7 +273,8 @@ if __name__ == '__main__':
         probs1 = np.load('../bert_for_fluency/cache/probs1_alltrain_{}.npy'.format(dataset))
 
         coef = 0.9
-        thresholds = np.arange(0.0, 1.05, 0.05)
+        thresholds = np.concatenate([np.arange(0.0, 0.95, 0.05), np.arange(0.95, 1.01, 0.01)])
+
         results = []  # List to store rows
 
         for method in total_score:
@@ -258,6 +306,45 @@ if __name__ == '__main__':
 
         # Save DataFrame to CSV
         results_df.to_csv(f'fluency_varied_thresholds_{dataset}.csv', index=False)
+
+        # Part 2: Varying coef while keeping threshold constant at 0.95
+        coefs = np.concatenate([np.arange(0.0, 0.95, 0.05), np.arange(0.95, 1.01, 0.01)])
+        constant_threshold = 0.95  # Keep threshold fixed
+
+        results_coef = []  # List to store rows
+
+        for method in total_score:
+            for coef in coefs:
+                # Calculate score_penalty with constant threshold
+                score_penalty = [
+                    s1 - s1 * coef * (p1 > constant_threshold) - (s2 - s2 * coef * (p2 > constant_threshold))
+                    for s1, s2, p1, p2 in zip(total_score0[method], total_score1[method], probs0[:, -1], probs1[:, -1])
+                ]
+                
+                print(f"Method: {method}, Coef: {coef:.2f}")
+                
+                # Get performance metrics from print_accuracy
+                hc, hi, hm, mm, total = print_accuracy(score_penalty, total_human_truth)
+                
+                # Append to results list
+                results_coef.append({
+                    'Method': method,
+                    'Coef': coef,
+                    'Threshold': constant_threshold,  # Include constant threshold for clarity
+                    'HC': hc,
+                    'HI': hi,
+                    'HM': hm,
+                    'MM': mm,
+                    'Total': total
+                })
+
+        # Convert results list to DataFrame
+        results_coef_df = pd.DataFrame(results_coef)
+
+        # Save to a new CSV file
+        results_coef_df.to_csv(f'fluency_varied_coef_{dataset}.csv', index=False)
+
+
 
 
         # # load pre-computed ndarray 
