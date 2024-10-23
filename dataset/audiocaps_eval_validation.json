@@ -1,0 +1,2999 @@
+[
+    {
+        "MM_1": [
+            "ticking of a clock with some light rustling",
+            "a cuckoo clock is ticking and a",
+            "attn15",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                -1
+            ]
+        ],
+        "MM_2": [
+            "A ticktock sound is present and people are speaking in the background",
+            "a clock ticking and a clock ticking",
+            "cos_sim_2488",
+            "fc",
+            [
+                -1,
+                1,
+                1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "a clock is ticking and a clock is ticking in the background",
+            "a cuckoo clock tick locking and chiming",
+            "fcbeam",
+            "attnbeam",
+            [
+                1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "XWw7ZM1c_QA",
+        "raw_name": "XWw7ZM1c_QA_30.000_40.000.wav",
+        "references": [
+            "A woman is speaking as surface is scratched followed by ticktock sounds",
+            "Rustling and soft speech and then a clock chimes",
+            "Wood sanding followed by a woman talking as a clock ticks proceeded by a cuckoo clock alarm cooing and bell ringing",
+            "Rustling and distant sanding with nearby ticking and chiming from a coo clock",
+            "Sounds of a mechanical clock"
+        ]
+    },
+    {
+        "MM_1": [
+            "a duck quacks and a duck quacks",
+            "a duck quacking followed by a",
+            "attn",
+            "rlbeam",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_2": [
+            "a duck is quacking",
+            "a duck quacking followed by a",
+            "fc15",
+            "rl15",
+            [
+                0,
+                0,
+                1,
+                0
+            ]
+        ],
+        "MM_3": [
+            "Sizzling and crackling occur, and an adult male speaks",
+            "a duck quacking followed by a",
+            "cos_sim_22075",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "bQNX7vDalQw",
+        "raw_name": "bQNX7vDalQw_0.000_10.000.wav",
+        "references": [
+            "Whispering followed by loud, consistent sizzling",
+            "A man talks followed by whispering and food sizzling",
+            "A man speaks followed by heavy sizzling",
+            "A deep voice followed by sizzling food",
+            "Male speech and then sizzling"
+        ]
+    },
+    {
+        "MM_1": [
+            "Wind blowing hard followed by two men talking in distant ending with a frog croaking",
+            "a man is speaking and a",
+            "cos_sim_21939",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a man is speaking and a",
+            "a man is speaking and a",
+            "rl",
+            "rlbeam",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_3": [
+            "a man is speaking and a truck engine is idling",
+            "a man is giving a speech",
+            "fcbeam",
+            "rl15",
+            [
+                -1,
+                1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_4": [
+            "a man is speaking and a",
+            "an adult male is speaking and a motor vehicle engine is running",
+            "rlbeam",
+            "fc15",
+            [
+                1,
+                -1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "2ABngPM3raQ",
+        "raw_name": "2ABngPM3raQ_30.000_40.000.wav",
+        "references": [
+            "A man talking while bongos play followed by frogs croaking",
+            "A man is speaking as frogs croak",
+            "A man talking as music is playing followed by a frog croaking",
+            "An adult male speaks while thumps occur in the background, then frogs croak and the adult male speaks again",
+            "An adult male speaks, a tapping sound occurs, and frogs croak"
+        ]
+    },
+    {
+        "HC": [
+            "A man talks as a vehicle is accelerating",
+            "A man speaks with a revving engine and clicking that stops",
+            "ground_t_103008",
+            "ground_t_104801",
+            [
+                -1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "A man speaking, accelerating a vehicle",
+            "A toilet flushing",
+            "ground_t_27486",
+            "idx795",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A man talks as a vehicle is accelerating",
+            "a woman speaks and a child laughs",
+            "ground_t_103008",
+            "fc",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "people are laughing and talking",
+            "a woman speaks and laughing followed by a dog laughing",
+            "attnbeam",
+            "rl",
+            0,
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "audio_id": "B4SZwi9Ce3o",
+        "references": [
+            "A man talks over a clicking sound and a car engine switches gears and speeds up",
+            "A man speaking, accelerating a vehicle",
+            "A man talking and plastic clicking as a vehicle engine accelerates",
+            "A man talks as a vehicle is accelerating",
+            "A man speaks with a revving engine and clicking that stops"
+        ]
+    },
+    {
+        "MM_1": [
+            "'A person snoring almost wheezing continuously",
+            "a baby cries and a",
+            "cos_sim_70845",
+            "rlbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a person is snoring loudly",
+            "a baby cries and a",
+            "attnbeam",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a person snoring",
+            "a baby cries and a",
+            "fc",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "a person is snoring",
+            "a baby cries and a",
+            "fcbeam",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "niwgMbB6tpQ",
+        "raw_name": "niwgMbB6tpQ_10.000_20.000.wav",
+        "references": [
+            "High-pitched snoring occurs in a rhythmic pattern",
+            "High pitched snoring occurs repeatedly",
+            "Plastic clicking and clacking followed by a woman snoring",
+            "Plastic clicking and tapping followed by a woman snoring",
+            "A person snoring"
+        ]
+    },
+    {
+        "MM_1": [
+            "a clock is ticking followed by a",
+            "a clock is ticking and a clock is ticking in the background",
+            "rlbeam",
+            "attn15",
+            [
+                -1,
+                0,
+                -1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "Man speaking to a group in foreign language",
+            "a clock is ticking followed by a",
+            "cos_sim_5382",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a clock ticking and chiming",
+            "a clock is ticking and a clock is ticking in the background",
+            "fcbeam",
+            "attnbeam",
+            [
+                1,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "Man speaking to a group in foreign language",
+            "a clock ticking and chiming",
+            "cos_sim_5382",
+            "fc",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "0G7rb74R-2A",
+        "raw_name": "0G7rb74R-2A_30.000_40.000.wav",
+        "references": [
+            "A man speaking on a microphone as a crowd of people laugh followed by glass clinking",
+            "A man speaks as an audience laughs",
+            "A man speaking on a microphone as a crowd of people laugh followed by dinner plates clacking",
+            "An adult male speaking through a microphone on a stage while an audience laughs at him",
+            "An adult male is speaking and an audience is laughing"
+        ]
+    },
+    {
+        "HC": [
+            "Continuous white noise, rustling and wind",
+            "Water splashes and wind blows",
+            "ground_t_106826",
+            "ground_t_106759",
+            [
+                -1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "Wind blowing and leaves rustling followed by plastic clicking and wind blowing into a microphone",
+            "Water splashing and then a speech.",
+            "ground_t_107226",
+            "idx412",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Water splashes and wind blows",
+            "pigeons coo and flap their wings",
+            "ground_t_106759",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "A faint distant ring",
+            "pigeons coo and flap their wings",
+            "cos_sim_84748",
+            "rl",
+            0,
+            [
+                0,
+                0,
+                1,
+                0
+            ]
+        ],
+        "audio_id": "J0yeFeKvIt8",
+        "references": [
+            "Continuous white noise, rustling and wind",
+            "Water splashes and wind blows",
+            "Wind blowing and leaves rustling followed by plastic clicking and wind blowing into a microphone",
+            "Wind blowing with some leaves rustling",
+            "Gusts of wind blowing as leaves rustle and birds chirp in the distance while wind blows into a microphone"
+        ]
+    },
+    {
+        "MM_1": [
+            "a vehicle horn honking followed by a train horn honking",
+            "a vehicle horn honking followed by a",
+            "attn",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a horn is triggered several times while a vehicle moves getting closer",
+            "a vehicle horn honking followed by a",
+            "attn15",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "A motor vehicle engine is running, and car horns blow",
+            "a horn is triggered several times while a vehicle moves getting closer",
+            "cos_sim_15887",
+            "attn15",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_4": [
+            "A motor vehicle engine is running, and car horns blow",
+            "a vehicle horn honking followed by a train running on railroad tracks as a train horn blows in the distance",
+            "cos_sim_15887",
+            "attnbeam",
+            [
+                1,
+                1,
+                -1,
+                -1
+            ]
+        ],
+        "audio_id": "mYQrjcYNrW0",
+        "raw_name": "mYQrjcYNrW0_20.000_30.000.wav",
+        "references": [
+            "A horn beeping rapidly then a long loud beep",
+            "A bus is tooting the horn",
+            "A bus horn honking as wind is blowing into a microphone before a bus drives by",
+            "A vehicle horn is repeatedly tooting followed by a passing engine rumble",
+            "A large motor vehicle engine is running, and a motor vehicle horn blows repeatedly and then stops"
+        ]
+    },
+    {
+        "MM_1": [
+            "a sewing machine works",
+            "a sewing machine works and then stops and starts again",
+            "attn",
+            "attn15",
+            [
+                0,
+                0,
+                -1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a sewing machine works and then stops followed by a beep",
+            "a power tool drilling followed by a",
+            "fc15",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a sewing machine works",
+            "a power tool drilling followed by a",
+            "attn",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "yrxa6_P2I80",
+        "raw_name": "yrxa6_P2I80_30.000_40.000.wav",
+        "references": [
+            "Birds chirping continuously",
+            "A group of birds chirp and pigeons coo",
+            "Several birds chirping and pigeons cooing",
+            "Pigeons cooing and birds chirping with a series of metal tapping",
+            "Many small, enclosed birds chirping"
+        ]
+    },
+    {
+        "MM_1": [
+            "a man speaking followed by a loud popping and more laughter",
+            "a gun is followed by a man speaking and a",
+            "attnbeam",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a gun is followed by a man speaking and a",
+            "an adult male is speaking and a crowd of people are laughing",
+            "rl",
+            "fc15",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "a man speaks followed by a gunshot and a man speaking",
+            "an adult male is speaking and a crowd of people are laughing",
+            "fcbeam",
+            "fc15",
+            [
+                0,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "0yETgW44MZU",
+        "raw_name": "0yETgW44MZU_20.000_30.000.wav",
+        "references": [
+            "A sudden horn blare as a train passes",
+            "A train horn honking as a train runs on railroad tracks and birds chirping",
+            "A train sounds horn while the engine taps",
+            "A loud, continuous horn followed by brief clanking and more horn honking",
+            "A honking horn from an oncoming train"
+        ]
+    },
+    {
+        "MM_1": [
+            "Loud deep snoring",
+            "a person is snoring and a",
+            "cos_sim_63628",
+            "rl15",
+            [
+                0,
+                1,
+                1,
+                0
+            ]
+        ],
+        "MM_2": [
+            "a person is snoring loudly",
+            "a person is snoring and a",
+            "attnbeam",
+            "rl15",
+            [
+                0,
+                1,
+                1,
+                0
+            ]
+        ],
+        "MM_3": [
+            "a person is snoring and a",
+            "a person is snoring loudly and a man speaks",
+            "rlbeam",
+            "attn15",
+            [
+                -1,
+                1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "hDMHIDJdfDA",
+        "raw_name": "hDMHIDJdfDA_40.000_50.000.wav",
+        "references": [
+            "Snoring occurs in a rhythmic pattern",
+            "A man snoring while someone chuckles in background",
+            "Continuous snoring",
+            "A series of snores followed by subdued laughter and another snore",
+            "Loud snoring repeating"
+        ]
+    },
+    {
+        "HC": [
+            "A few digital hums followed by scratching",
+            "A mechanical beeping tone followed by static, then the return of the beeping",
+            "ground_t_107357",
+            "ground_t_104169",
+            [
+                1,
+                -1,
+                0,
+                1
+            ]
+        ],
+        "HI": [
+            "A few digital hums followed by scratching",
+            "Light wind with people screaming and engine running",
+            "ground_t_107357",
+            "idx718",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A bleeping noise followed by a static noise",
+            "a dog growls and barks",
+            "ground_t_106449",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Phone ringing buzzing",
+            "a person is snoring and",
+            "cos_sim_9306",
+            "rl15",
+            0,
+            [
+                1,
+                1,
+                1,
+                0
+            ]
+        ],
+        "audio_id": "Ls1zyPjs3k8",
+        "references": [
+            "A series of electronic beeps followed by static",
+            "A few digital hums followed by scratching",
+            "A bleeping noise followed by a static noise",
+            "Digital humming and buzzing followed by scratching",
+            "A mechanical beeping tone followed by static, then the return of the beeping"
+        ]
+    },
+    {
+        "HC": [
+            "Water is trickling, and a man talks",
+            "Splashing water and quiet murmuring",
+            "ground_t_105639",
+            "ground_t_106920",
+            [
+                1,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "HI": [
+            "Water is trickling, and a man talks",
+            "Birds chirping and water trickling",
+            "ground_t_105639",
+            "idx723",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Water spraying and gurgling as a man speaks and a crowd of people talk in the background",
+            "an adult male speaks and laughs and an adult male laughs",
+            "ground_t_104642",
+            "attnbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a man laughs and a woman speaks",
+            "a man speaks followed by a laughing and a",
+            "fcbeam",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "an adult male speaks and laughs and an adult male laughs",
+            "a man speaks followed by a laughing and a",
+            "attnbeam",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a man speaks and a woman speaks and laughs",
+            "a man speaks followed by a laughing and a",
+            "attn",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "Water is rushing, splashing and gurgling, and an adult male is speaking",
+            "a man speaks followed by a laughing laughing",
+            "cos_sim_16655",
+            "rlbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "Me4npKmtchA",
+        "raw_name": "Me4npKmtchA_270.000_280.000.wav",
+        "references": [
+            "Water is trickling, and a man talks",
+            "Splashing water and quiet murmuring",
+            "Bubbles gurgling and water spraying as a man speaks softly while crowd of people talk in the background",
+            "Water trickling and faint, muffled speech",
+            "Water spraying and gurgling as a man speaks and a crowd of people talk in the background"
+        ]
+    },
+    {
+        "MM_1": [
+            "a train horn is followed by a",
+            "a train horn is followed by a",
+            "rlbeam",
+            "rl15",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_2": [
+            "a train horn is followed by a",
+            "a train running on railroad tracks followed by a train horn blowing as a train engine runs on railroad tracks",
+            "rl",
+            "fc15",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "Train horn honking followed by stopping train and more honking",
+            "a train running on railroad tracks followed by a train horn blowing",
+            "cos_sim_8928",
+            "attnbeam",
+            [
+                -1,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "Train horn honking followed by stopping train and more honking",
+            "a train running on railroad tracks followed by a train horn blowing as a train engine runs on railroad tracks",
+            "cos_sim_8928",
+            "fc15",
+            [
+                -1,
+                1,
+                -1,
+                -1
+            ]
+        ],
+        "audio_id": "cFoXRmGgIME",
+        "raw_name": "cFoXRmGgIME_20.000_30.000.wav",
+        "references": [
+            "High pitches squealing and a horn blowing with constant humming of an engine",
+            "A train running and then a horn honking",
+            "A train horn honking as a train is running on a railroad track and wind is blowing into a microphone",
+            "A loud metallic whine punctuated by a train horn",
+            "A train travels on the railroad and sounds the train horn"
+        ]
+    },
+    {
+        "HC": [
+            "There is a mature male talking to some animals",
+            "A man talking followed by a goat baaing as wind lightly blows into a microphone followed by a crow cawing in the distance",
+            "ground_t_3452",
+            "ground_t_103014",
+            [
+                -1,
+                1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "A man speaks and a small goat bleats",
+            "An idle vehicle engine running",
+            "ground_t_104391",
+            "idx653",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A man speaks and a small goat bleats",
+            "water is running and gurgling",
+            "ground_t_104391",
+            "fc15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "water is running and gurgling",
+            "a water is running followed by a",
+            "fcbeam",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a water faucet is turned on and off",
+            "a water is running followed by a",
+            "attn",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "water is running and gurgling",
+            "an engine works in idle nearby",
+            "fc",
+            "attn15",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_4": [
+            "a water faucet is turned on and off",
+            "an engine works in idle nearby",
+            "attn",
+            "attnbeam",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_5": [
+            "water is running and gurgling",
+            "a water faucet is turned on and off",
+            "fcbeam",
+            "attn",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "audio_id": "0NGSrwioYjA",
+        "raw_name": "0NGSrwioYjA_30.000_40.000.wav",
+        "references": [
+            "There is a mature male talking to some animals",
+            "A man talking followed by a goat baaing as wind lightly blows into a microphone followed by a crow cawing in the distance",
+            "A man speaking followed by a goat baaing",
+            "A man speaks and a small goat bleats",
+            "A man talking as a sheep baas"
+        ]
+    },
+    {
+        "HC": [
+            "An adult female is speaking in a quiet environment",
+            "A woman is performing a speech",
+            "ground_t_106865",
+            "ground_t_106208",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "A woman speaks while delivering a speech",
+            "A bell tolls followed by ticking",
+            "ground_t_106928",
+            "idx703",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A woman delivering a speech",
+            "an engine is being revved up and then idles",
+            "ground_t_103048",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "A woman speaking in distance",
+            "a motorcycle engine is revved up sharply and then idles",
+            "cos_sim_21880",
+            "fcbeam",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "EvZ3jOMYWxk",
+        "references": [
+            "A woman speaks while delivering a speech",
+            "An adult female is speaking in a quiet environment",
+            "A woman is speaking in a quiet environment",
+            "A woman is performing a speech",
+            "A woman delivering a speech"
+        ]
+    },
+    {
+        "HC": [
+            "A man speaking as a stream of water sprays and splashes",
+            "Humming and rustling with a man speaking",
+            "ground_t_106447",
+            "ground_t_102800",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "A man speaking as a stream of water sprays and splashes",
+            "Typing is occurring on a typewriter, with fast and sharp taps and intermittent zipping of the carriage",
+            "ground_t_106447",
+            "idx345",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A man speaking as a stream of water splashes and flows while music faintly plays in the distance",
+            "a man speaking followed by gunshots and gunshots",
+            "ground_t_103937",
+            "rlbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a man speaking followed by glass breaking and glass breaking",
+            "a man speaking followed by gunshots and gunshots",
+            "fcbeam",
+            "rl",
+            0,
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "audio_id": "UCy1BEx8jBE",
+        "references": [
+            "A man speaking as a stream of water splashes and flows while music faintly plays in the distance",
+            "A man speaks while water splashes",
+            "A man speaking as a stream of water sprays and splashes",
+            "Humming and rustling with a man speaking",
+            "A man talks while water burbles"
+        ]
+    },
+    {
+        "HC": [
+            "Soft drilling noise",
+            "'A power tool vibrating with men speaking",
+            "ground_t_106089",
+            "ground_t_102847",
+            [
+                -1,
+                -1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "'A power tool vibrating with men speaking",
+            "Birds chirping and tweeting",
+            "ground_t_102847",
+            "idx473",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "'A power tool vibrating with men speaking",
+            "Steam is hissing consistently and then there is a little softness to the whistle and a few clicks",
+            "ground_t_102847",
+            "cos_sim_69369",
+            [
+                -1,
+                1,
+                1,
+                -1
+            ]
+        ],
+        "MM_1": [
+            "a person laughs and then a person burps",
+            "a man speaks and laughs followed by a pig oinking",
+            "attn",
+            "attnbeam",
+            0,
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "audio_id": "9BukzlPNqC8",
+        "references": [
+            "A power tool motor humming as compressed air hisses alongside a group of people talking in the background followed by hammering on a metal surface",
+            "Drilling in operation with speech and thumping in the background",
+            "Soft drilling noise",
+            "A drilling noise with a man speaking in the background",
+            "'A power tool vibrating with men speaking"
+        ]
+    },
+    {
+        "HC": [
+            "Rain pitter-patters and wind blows",
+            "Continuous hissing at varying levels",
+            "ground_t_104731",
+            "ground_t_107143",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "Hisses continuously with some static",
+            "Coughing and speech",
+            "ground_t_102869",
+            "idx301",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Continuous hissing at varying levels",
+            "a spray is released",
+            "ground_t_107143",
+            "fc",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a spray is released",
+            "steam hisses loudly nearby and then steam hisses loudly nearby",
+            "fc",
+            "fc15",
+            0,
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "audio_id": "hGWarNR6xmg",
+        "references": [
+            "Hisses continuously with some static",
+            "A roaring hiss is ongoing, and a brief low hum occurs",
+            "Repetitive loud hissing with some static",
+            "Rain pitter-patters and wind blows",
+            "Continuous hissing at varying levels"
+        ]
+    },
+    {
+        "HC": [
+            "Ocean waves crashing as a man talks in the distance and wind heavily blows into a microphone",
+            "Wind blowing hard and waves crashing and splashing",
+            "ground_t_105882",
+            "ground_t_103411",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "Strong wind noise under a microphone as waves travel",
+            "Humming of a nearby jet engine",
+            "ground_t_104359",
+            "idx202",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Ocean waves crashing as a man talks in the distance and wind heavily blows into a microphone",
+            "a person burps loudly and people laugh",
+            "ground_t_105882",
+            "attnbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Wind blows and waves crash while a man speaks",
+            "a person burps and people laugh",
+            "cos_sim_97602",
+            "fcbeam",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "3MoF8myFs8Y",
+        "references": [
+            "Ocean waves crashing as a man talks in the distance and wind heavily blows into a microphone",
+            "Strong wind noise under a microphone as waves travel",
+            "A strong wind is blowing and constant background waves can be heard",
+            "Wind blowing hard and waves crashing and splashing",
+            "Wind blowing and waves crashing"
+        ]
+    },
+    {
+        "HC": [
+            "Ongoing speech with the faint quacking of a duck in the background",
+            "A young boy talking as a duck is quacking while water trickles and frogs croak in the background",
+            "ground_t_104039",
+            "ground_t_103679",
+            [
+                1,
+                -1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "A young boy talking as a duck is quacking while water trickles and frogs croak in the background",
+            "A person speaks with some whistling and typing with faint booms",
+            "ground_t_103679",
+            "idx783",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A pretend duck quacks in cartoon fashion while an adult female speaks",
+            "a horse is trotting in the distance",
+            "ground_t_104615",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Male speaking and duck quacking in background",
+            "a horse neighs and a horse neighs",
+            "cos_sim_922",
+            "attn",
+            0,
+            [
+                1,
+                1,
+                1,
+                0
+            ]
+        ],
+        "audio_id": "dkiwn2FdDVw",
+        "references": [
+            "Ongoing speech with the faint quacking of a duck in the background",
+            "A young boy talking as a duck is quacking while water trickles and frogs croak in the background",
+            "A woman speaks with distant quacks of a duck",
+            "A pretend duck quacks in cartoon fashion while an adult female speaks",
+            "A female voice and a duck quacking"
+        ]
+    },
+    {
+        "HC": [
+            "Surf comes ashore as a man speaks",
+            "Water moving with male voices soft in the background",
+            "ground_t_105313",
+            "ground_t_107192",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "Water splashes and wind blows as men speak",
+            "Ongoing speech with the faint quacking of a duck in the background",
+            "ground_t_102877",
+            "idx319",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Waves crashing onto shore followed by a man talking",
+            "Men speak over water gurgling",
+            "ground_t_103859",
+            "cos_sim_8186",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "water is splashing and gurgling and people are speaking in the background",
+            "waves crash against a shoreline and a man speaks",
+            "attn",
+            "attnbeam",
+            0,
+            [
+                -1,
+                -1,
+                -1,
+                1
+            ]
+        ],
+        "audio_id": "BlbGXalLNVU",
+        "references": [
+            "A man talking as water splashes",
+            "Waves crashing onto shore followed by a man talking",
+            "Surf comes ashore as a man speaks",
+            "Water splashes and wind blows as men speak",
+            "Water moving with male voices soft in the background"
+        ]
+    },
+    {
+        "MM_1": [
+            "a clock ticks and rocks",
+            "a dog is panting and a",
+            "fc",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "A machine runs rapidly",
+            "a dog is panting and a",
+            "cos_sim_76163",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a clock ticks and rocks",
+            "a pig oinks nearby",
+            "fc",
+            "attnbeam",
+            [
+                0,
+                0,
+                0,
+                1
+            ]
+        ],
+        "MM_4": [
+            "a clock ticks and rocks",
+            "a pig oinks nearby several times",
+            "fc15",
+            "attn15",
+            [
+                0,
+                0,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "yau2WIRkxb8",
+        "raw_name": "yau2WIRkxb8_100.000_110.000.wav",
+        "references": [
+            "A whirring motor run uninterrupted",
+            "A toy helicopter flying",
+            "A small high frequency motor vibrates",
+            "A small engine whirring",
+            "A helicopter is in motion"
+        ]
+    },
+    {
+        "MM_1": [
+            "a cat is meowing",
+            "a cat meows and a",
+            "attnbeam",
+            "rl15",
+            [
+                1,
+                -1,
+                1,
+                0
+            ]
+        ],
+        "MM_2": [
+            "a cat is meowing and a person is talking",
+            "a cat meows and a",
+            "fcbeam",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": null,
+        "MM_4": null,
+        "audio_id": "ajheseWZmmU",
+        "raw_name": "ajheseWZmmU_70.000_80.000.wav",
+        "references": [
+            "A cat meowing as a man giggles",
+            "A cat meowing a few times",
+            "A cat meowing as a person makes kissing noises followed by a guy chuckling",
+            "A cat meowing and a person hums",
+            "A cat meowing as a person is kissing aloud followed by a man giggling during light audio static"
+        ]
+    },
+    {
+        "MM_1": [
+            "a train horn is followed by a",
+            "a train horn is followed by a",
+            "rl",
+            "rlbeam",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_2": [
+            "Fast scratches of something sharp onto plastic",
+            "a train horn is followed by a",
+            "cos_sim_38707",
+            "rlbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "Fast scratches of something sharp onto plastic",
+            "a train running on railroad tracks followed by a train horn blowing",
+            "cos_sim_38707",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "Fast scratches of something sharp onto plastic",
+            "a train blows its horn as it passes by",
+            "cos_sim_38707",
+            "fcbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "DAN1t9ukkg0",
+        "raw_name": "DAN1t9ukkg0_30.000_40.000.wav",
+        "references": [
+            "A person types on a keyboard",
+            "Typing is occurring on a keyboard in a quiet environment",
+            "A person is typing keyboard with some mouse clicking",
+            "Computer keyboard clicks as typing occurs",
+            "Typing on a keyboard"
+        ]
+    },
+    {
+        "MM_1": [
+            "a sizzling sound is followed by a sizzle of frying food",
+            "food sizzling and a",
+            "attn",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                0
+            ]
+        ],
+        "MM_2": [
+            "water is running and gurgling",
+            "food sizzling and a",
+            "fc",
+            "rlbeam",
+            [
+                -1,
+                -1,
+                1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "water is running and gurgling",
+            "sizzling and crackling are occurring and an adult male speaks in the background",
+            "fc15",
+            "attn15",
+            [
+                0,
+                -1,
+                1,
+                -1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "4fz0-Kx2oNs",
+        "raw_name": "4fz0-Kx2oNs_250.000_260.000.wav",
+        "references": [
+            "Sizzling of food frying",
+            "A continuous sizzling with oil popping",
+            "Food and oil sizzling followed by a person snapping",
+            "Food frying in a pan",
+            "Loud, continuous sizzling"
+        ]
+    },
+    {
+        "MM_1": [
+            "a vehicle horn honking followed by a vehicle horn honking",
+            "a vehicle horn honking followed by a",
+            "attn",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                0
+            ]
+        ],
+        "MM_2": [
+            "A fancy car horn plays a song over and over",
+            "a vehicle horn honking followed by a vehicle horn honking",
+            "cos_sim_82249",
+            "fc",
+            [
+                1,
+                1,
+                1,
+                0
+            ]
+        ],
+        "MM_3": [
+            "A fancy car horn plays a song over and over",
+            "a vehicle horn honking followed by a vehicle horn honking several times in the distance",
+            "cos_sim_82249",
+            "attnbeam",
+            [
+                1,
+                1,
+                1,
+                0
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "rp3CQsWxVgE",
+        "raw_name": "rp3CQsWxVgE_0.000_8.000.wav",
+        "references": [
+            "A musical horn",
+            "A vehicle horn honking a melody",
+            "White noise followed by a musical horn honking",
+            "A vehicle horn blares out a musical tune",
+            "Traffic is present nearby, and a car horn plays the theme to the godfather"
+        ]
+    },
+    {
+        "MM_1": [
+            "A toilet flushes",
+            "a water is running followed by a",
+            "cos_sim_3227",
+            "rlbeam",
+            [
+                1,
+                1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_2": [
+            "water is running and gurgling",
+            "a water is running followed by a",
+            "attn",
+            "rl",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a water is running followed by a",
+            "water is running followed by a toilet flushing",
+            "rl",
+            "rl15",
+            [
+                -1,
+                -1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "water is running and gurgling",
+            "water is running followed by a toilet flushing",
+            "fc",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "gW7s3YAthpI",
+        "raw_name": "gW7s3YAthpI_430.000_440.000.wav",
+        "references": [
+            "Chewing as liquid is poured and some light banging on a hard surface",
+            "Some light banging and rattling with liquid pouring and faint chewing",
+            "A person gulping followed by glass tapping then liquid shaking in a container proceeded by liquid pouring before plastic thumps on paper",
+            "Glass placed on table, a container with liquid is shaken and then poured into the glass",
+            "Glass clanking followed by liquid shaking in a plastic container then liquid pouring and filling a container proceeded by plastic rattling as someone chews a loud"
+        ]
+    },
+    {
+        "HC": [
+            "Laughter and a female speaking and then a male vocalizing a sneezing sound",
+            "A baby laughs while a man and a woman speaks and laughs as well",
+            "ground_t_106355",
+            "ground_t_66748",
+            [
+                -1,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "HI": [
+            "A man and woman laughing followed by a man shouting then a woman laughing as a child laughs",
+            "A rumbling sound followed by a spray of liquid and a man speaking",
+            "ground_t_105082",
+            "idx785",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A baby laughs while a man and a woman speaks and laughs as well",
+            "a woman speaking and crinkling plastic",
+            "ground_t_66748",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "A woman starts talking and a baby joins in and quickly the woman is laughing loudly",
+            "a woman speaking and crinkling plastic",
+            "cos_sim_93854",
+            "attnbeam",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "_AcJVyToQUQ",
+        "references": [
+            "A man and woman laughing followed by a man shouting then a woman laughing as a child laughs",
+            "A child and a woman laughing followed by a woman talking then a man shouting",
+            "Laughter and a female speaking and then a male vocalizing a sneezing sound",
+            "A baby laughing and the female speech and male shouting",
+            "A baby laughs while a man and a woman speaks and laughs as well"
+        ]
+    },
+    {
+        "HC": [
+            "Male speech and then applause",
+            "A man talking followed by a crowd of people cheering and applauding",
+            "ground_t_105532",
+            "ground_t_105357",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "A man speaks followed by a crowd applauding",
+            "A large truck driving by as an emergency siren wails and truck horn honks",
+            "ground_t_106281",
+            "idx6",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Brief speech followed by loud applause and cheering",
+            "a woman speaking",
+            "ground_t_106929",
+            "attn",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "A crowd clapping and whistling cheerfully",
+            "a woman is giving a speech",
+            "cos_sim_10278",
+            "fc15",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "L_CNz9Vrtkw",
+        "references": [
+            "Brief speech followed by loud applause and cheering",
+            "Male speech and then applause",
+            "A man speaks followed by a crowd applauding",
+            "A man speaking followed by a crowd applauding and cheering",
+            "A man talking followed by a crowd of people cheering and applauding"
+        ]
+    },
+    {
+        "HC": [
+            "Waves and wind rake a shore",
+            "Waves of water colliding repeatedly",
+            "ground_t_106757",
+            "ground_t_104116",
+            [
+                0,
+                0,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "Ocean waves are repeatedly splashing on shore, and a gentle wind is blowing",
+            "Glass doors slamming and sliding shut",
+            "ground_t_103172",
+            "idx465",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Waves crash on a beach while the wind blows",
+            "a stream of water is splashing and",
+            "ground_t_106123",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "waves crashing and waves crashing",
+            "a stream of water is splashing and",
+            "rlbeam",
+            "rl15",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "1e98HeU9Vrg",
+        "references": [
+            "Waves and wind rake a shore",
+            "Waves of water colliding repeatedly",
+            "Waves crash on a beach while the wind blows",
+            "Ocean waves are repeatedly splashing on shore, and a gentle wind is blowing",
+            "Close ocean waves"
+        ]
+    },
+    {
+        "HC": [
+            "Vibrations and splashing followed by people speaking",
+            "A young girl talks followed by another young girl laughing then a young man yelling as a river stream splashes and flows with a crowd of people talking in the background",
+            "ground_t_106887",
+            "ground_t_103224",
+            [
+                -1,
+                -1,
+                1,
+                -1
+            ]
+        ],
+        "HI": [
+            "A young girl talks followed by another young girl laughing then a young man yelling as a river stream splashes and flows with a crowd of people talking in the background",
+            "A person speaks with some whistling and typing with faint booms",
+            "ground_t_103224",
+            "idx783",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "'A group of young adults laughing followed by a man shouting as a stream of water splashes and flows while wind blows",
+            "a person belches very loudly",
+            "ground_t_104205",
+            "fc15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a person belches very loudly",
+            "a loud burp followed by a loud burp",
+            "fcbeam",
+            "attn",
+            0,
+            [
+                0,
+                0,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "3RultJjvTWI",
+        "references": [
+            "Vibrations and splashing followed by people speaking",
+            "A young girl talks followed by another young girl laughing then a young man yelling as a river stream splashes and flows with a crowd of people talking in the background",
+            "'A group of young adults laughing followed by a man shouting as a stream of water splashes and flows while wind blows",
+            "Water splashing with speech and brief laughter",
+            "People are talking and water is splashing"
+        ]
+    },
+    {
+        "HC": [
+            "Male speech and then a door shutting",
+            "An electric motor buzzing as a man is talking followed by a door closing",
+            "ground_t_105877",
+            "ground_t_105540",
+            [
+                -1,
+                -1,
+                -1,
+                1
+            ]
+        ],
+        "HI": [
+            "An electric motor buzzing as a man is talking followed by a door closing",
+            "Several gunshots firing followed by two men talking then music playing",
+            "ground_t_105540",
+            "idx419",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A man talking as an electronic device hums followed by a door closing",
+            "a man speaks followed by a man speaking then a power tool drilling",
+            "ground_t_104660",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a man speaks followed by a power tool drilling",
+            "a man speaks followed by a man speaking",
+            "fc",
+            "attnbeam",
+            0,
+            [
+                -1,
+                -1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "lh801oHGtD4",
+        "references": [
+            "A small motor buzzing followed by a man speaking as a metal door closes",
+            "Male speech and then a door shutting",
+            "A man talking as an electronic device hums followed by a door closing",
+            "Electronic humming followed by a man speaking and a door closing",
+            "An electric motor buzzing as a man is talking followed by a door closing"
+        ]
+    },
+    {
+        "HC": [
+            "A radio playing in the background followed by a vehicle engine accelerating",
+            "People are communicating followed by a dog barking and a vehicle moving",
+            "ground_t_106353",
+            "ground_t_105271",
+            [
+                0,
+                1,
+                1,
+                -1
+            ]
+        ],
+        "HI": [
+            "People are talking while a motor vehicle engine is revving",
+            "Humming and vibrating from a power tool",
+            "ground_t_106538",
+            "idx181",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Human voices followed by the movement of a vehicle",
+            "people are talking and water is splashing",
+            "ground_t_104032",
+            "fc15",
+            [
+                -1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a crowd of people talking as a vehicle engine runs idle",
+            "a group of people are talking and laughing",
+            "fc",
+            "attnbeam",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "e4ph6bIC5zc",
+        "references": [
+            "Human voices followed by the movement of a vehicle",
+            "A radio playing in the background followed by a vehicle engine accelerating",
+            "Distant murmuring and distant engine revving",
+            "People are communicating followed by a dog barking and a vehicle moving",
+            "People are talking while a motor vehicle engine is revving"
+        ]
+    },
+    {
+        "HC": [
+            "A man talking as a kid yells followed by an aircraft flying in the distance as wind blows into a microphone",
+            "A man speaks with some distant hum and a child speaking",
+            "ground_t_103013",
+            "ground_t_30598",
+            [
+                1,
+                -1,
+                1,
+                -1
+            ]
+        ],
+        "HI": [
+            "A man is speaking with wind background noise, and a child speaks",
+            "Ocean waves crashing as wind blows into a microphone",
+            "ground_t_104715",
+            "idx517",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A man is speaking with wind background noise, and a child speaks",
+            "A race car accelerates loudly nearby, followed by a man yelling",
+            "ground_t_104715",
+            "cos_sim_54579",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a man speaks and a child speaks",
+            "a man is speaking and a truck engine is idling",
+            "fc",
+            "fcbeam",
+            0,
+            [
+                -1,
+                1,
+                1,
+                -1
+            ]
+        ],
+        "audio_id": "Ch0LMmhBUg4",
+        "references": [
+            "A man talking as a kid yells followed by an aircraft flying in the distance as wind blows into a microphone",
+            "A man speaking and a child yelling with wind blowing",
+            "A man speaks with some distant hum and a child speaking",
+            "A man is speaking with wind background noise, and a child speaks",
+            "A man is speaking with natural outdoor noises, and a child speaks"
+        ]
+    },
+    {
+        "HC": [
+            "Spray and a high pitch tone",
+            "Steam hisses while machinery runs",
+            "ground_t_106822",
+            "ground_t_106956",
+            [
+                1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "Steam escapes with a hissing noise",
+            "There is a mature male talking to some animals",
+            "ground_t_104108",
+            "idx132",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Spray and a high pitch tone",
+            "a person is snoring loudly and a man speaks",
+            "ground_t_106822",
+            "fc15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Scuffing and hissing are present, then a motor runs and vibrates loudly",
+            "a person is snoring and a woman speaks",
+            "cos_sim_20911",
+            "rl15",
+            0,
+            [
+                1,
+                1,
+                0,
+                1
+            ]
+        ],
+        "audio_id": "lfO471Rn61k",
+        "references": [
+            "Spray and a high pitch tone",
+            "Humming and hissing with some mechanical ringing",
+            "Steam escapes with a hissing noise",
+            "Loud hissing followed by a low frequency, consistent beep then more hissing",
+            "Steam hisses while machinery runs"
+        ]
+    },
+    {
+        "HC": [
+            "Rustling and shaking followed by a horn and gusts of wind",
+            "A vehicle horn honking as a motor engine gurgles and wind blows into a microphone",
+            "ground_t_27609",
+            "ground_t_104780",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "Rattling of an engine with wind blowing and a horn honking",
+            "A loud burping followed by a laughing from young girls",
+            "ground_t_106850",
+            "idx407",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Rustling and shaking followed by a horn and gusts of wind",
+            "an engine running followed by a bell ringing",
+            "ground_t_27609",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "A detailed car horn blows and a man laughs",
+            "a train running on railroad tracks followed by a train horn blowing",
+            "cos_sim_21094",
+            "attnbeam",
+            0,
+            [
+                -1,
+                1,
+                0,
+                -1
+            ]
+        ],
+        "audio_id": "B8rdur4aams",
+        "references": [
+            "A vehicle engine gurgling followed by a horn tooting as wind blows into a microphone",
+            "Rattling and humming with a horn echoing and wind blowing",
+            "Rustling and shaking followed by a horn and gusts of wind",
+            "A vehicle horn honking as a motor engine gurgles and wind blows into a microphone",
+            "Rattling of an engine with wind blowing and a horn honking"
+        ]
+    },
+    {
+        "MM_1": [
+            "birds are chirping and a duck quacks",
+            "a dog whimpers and a",
+            "fcbeam",
+            "rlbeam",
+            [
+                1,
+                1,
+                0,
+                1
+            ]
+        ],
+        "MM_2": [
+            "birds are chirping and dogs are barking in the background",
+            "a dog whimpers and a",
+            "fc15",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a small dog is whimpering and birds are chirping",
+            "a dog whimpers and a",
+            "attn15",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "2bq2lc3DLwM",
+        "raw_name": "2bq2lc3DLwM_30.000_40.000.wav",
+        "references": [
+            "A man speaks and a vehicle passes",
+            "A man gives a talk while engines were in the background",
+            "A man speaking and a car driving closer than passing by",
+            "As an adult male speaks, a mid-size motor vehicle engine runs, accelerates and approaches",
+            "A man is speaking"
+        ]
+    },
+    {
+        "HC": [
+            "Dogs barking and muffled speech",
+            "Several people talk as a few dogs bark, birds chirp and wind rustles",
+            "ground_t_105724",
+            "ground_t_4967",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "A dog barking as a man is talking while birds chirp and wind blows into a microphone",
+            "Water splashing and trickling as wind blows into a microphone while a man speaks over a radio",
+            "ground_t_106555",
+            "idx469",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A dog barking as a man is talking while birds chirp and wind blows into a microphone",
+            "a horse is trotting and people are talking in the background",
+            "ground_t_106555",
+            "rlbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "birds are chirping a dog barks and an adult male speaks",
+            "a horse is trotting and people are talking in the background",
+            "fcbeam",
+            "rl",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "0yxEvdnimGg",
+        "references": [
+            "A dog barking as a man is talking while birds chirp and wind blows into a microphone",
+            "Dogs barking and muffled speech",
+            "Dogs are barking with wind noise while people are speaking",
+            "Several people talk as a few dogs bark, birds chirp and wind rustles",
+            "Barks of distant dogs with men speaking and wind blowing"
+        ]
+    },
+    {
+        "MM_1": [
+            "A man speaks with a crowd rustling",
+            "wind blows and a man is speaking and a",
+            "cos_sim_32906",
+            "rl",
+            [
+                -1,
+                -1,
+                1,
+                -1
+            ]
+        ],
+        "MM_2": [
+            "wind blows and a man is speaking and a",
+            "wind blows and a man is giving a speech",
+            "rl",
+            "rl15",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "a man is speaking and a car engine is idling",
+            "a man is speaking and wind is blowing",
+            "fcbeam",
+            "attnbeam",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_4": [
+            "A man speaks with a crowd rustling",
+            "an adult male is speaking and a motor vehicle engine is running in the background",
+            "cos_sim_32906",
+            "fc15",
+            [
+                -1,
+                -1,
+                1,
+                0
+            ]
+        ],
+        "audio_id": "6Nvu6EcpdE8",
+        "raw_name": "6Nvu6EcpdE8_30.000_40.000.wav",
+        "references": [
+            "The wind is blowing, an adult male speaks via an electronic device, and a click occurs",
+            "Wind blowing with a man speaking followed by a click and light hum",
+            "Wind blows and a man speaks with a quick pop",
+            "A main is smoothly speaking over a loud faint noise",
+            "A man is talking then an engine turns on"
+        ]
+    },
+    {
+        "HC": [
+            "A bell ringing repeatedly",
+            "Large church bells ring",
+            "ground_t_105384",
+            "ground_t_106706",
+            [
+                -1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "A bell ringing repeatedly",
+            "Squealing and whimpering with some rustling followed by a man speaking",
+            "ground_t_106597",
+            "idx810",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "A bell ringing repeatedly",
+            "a series of gunshots firing as a man grunts followed by a series of gunshots firing alongside a series of",
+            "ground_t_106597",
+            "fc",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a series of gunshots firing as a man grunts followed by a series of gunshots firing alongside a series of",
+            "a gun is fired several times and a man is talking over a radio",
+            "fc",
+            "fc15",
+            [
+                -1,
+                -1,
+                0,
+                -1
+            ]
+        ],
+        "MM_2": [
+            "Multiple bells are dinging, clanking and clinking against one another and the vibration of the movement is echoing",
+            "a series of gunshots firing as a gun is fired and a music is played",
+            "cos_sim_13021",
+            "attn",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "Multiple bells are dinging, clanking and clinking against one another and the vibration of the movement is echoing",
+            "a gun is fired and a gun is shot several times",
+            "cos_sim_13021",
+            "attn15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "Multiple bells are dinging, clanking and clinking against one another and the vibration of the movement is echoing",
+            "a series of gunshots firing as a man grunts followed by a series of gunshots firing alongside a series of",
+            "cos_sim_13021",
+            "fc",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "-DmjkgWa-rw",
+        "raw_name": "-DmjkgWa-rw_10.000_20.000.wav",
+        "references": [
+            "A bell is ringing",
+            "Church bells ringing during audio static",
+            "A bell ringing repeatedly",
+            "A bell ringing repeatedly",
+            "Large church bells ring"
+        ]
+    },
+    {
+        "MM_1": [
+            "an adult male is speaking and a tool motor is running whirring occurs and an adult male speaks in the",
+            "a sewing machine is followed by a man speaking",
+            "fc15",
+            "rl15",
+            [
+                1,
+                0,
+                -1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a man speaks and a sewing machine runs",
+            "an adult male is speaking and a tool motor is running whirring occurs and an adult male speaks in the",
+            "attn",
+            "fc15",
+            [
+                1,
+                1,
+                1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "a man is speaking and a sewing machine",
+            "an adult male is speaking and a tool motor is running whirring occurs and an adult male speaks in the",
+            "rlbeam",
+            "fc15",
+            [
+                1,
+                0,
+                1,
+                -1
+            ]
+        ],
+        "MM_4": [
+            "Rustling followed by high pitched vibrations and sanding with a man speaking",
+            "a man is speaking and a sewing machine",
+            "cos_sim_34732",
+            "rlbeam",
+            [
+                -1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "inSvboaSRwA",
+        "raw_name": "inSvboaSRwA_100.000_110.000.wav",
+        "references": [
+            "A male speaking and a saw running",
+            "Continuous buzzing and clanking",
+            "A machine motor running as a man is speaking followed by rapid buzzing",
+            "A man talking as a machine motor hums followed by electronic buzzing",
+            "A man speaking while power tools are whirring and running in the background"
+        ]
+    },
+    {
+        "MM_1": [
+            "a person burping followed by a",
+            "a person burps loudly nearby loudly",
+            "rl",
+            "fc15",
+            [
+                -1,
+                -1,
+                0,
+                -1
+            ]
+        ],
+        "MM_2": [
+            "a person burping followed by a",
+            "a person burping followed by a",
+            "rl",
+            "rl15",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_3": [
+            "a person burps loudly several times loudly nearby",
+            "a person burping followed by a",
+            "attn15",
+            "rl15",
+            [
+                1,
+                1,
+                0,
+                1
+            ]
+        ],
+        "MM_4": null,
+        "audio_id": "-Sz4z0QwEuM",
+        "raw_name": "-Sz4z0QwEuM_20.000_30.000.wav",
+        "references": [
+            "A long burp ends in a sigh",
+            "Someone belches very loudly two times",
+            "A long, loud burp",
+            "Burping, belching",
+            "A person burps loudly"
+        ]
+    },
+    {
+        "HC": [
+            "Rain is falling continuously",
+            "Water flowing through pipes",
+            "ground_t_104274",
+            "ground_t_104164",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "Water flowing through pipes",
+            "A helicopter blades running",
+            "ground_t_104164",
+            "idx747",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Water trickling rapidly and draining",
+            "a baby is crying and a",
+            "ground_t_105358",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "a baby is crying and a",
+            "a baby is crying and a",
+            "rl",
+            "rl15",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_2": [
+            "a baby is crying and a",
+            "a baby is crying and a woman is speaking",
+            "rlbeam",
+            "attn15",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_3": [
+            "Water is running",
+            "a baby is crying and a",
+            "cos_sim_4368",
+            "rlbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "a baby cries and a woman speaks",
+            "a baby is crying",
+            "fc",
+            "attnbeam",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_5": [
+            "Water is running",
+            "a baby is crying",
+            "cos_sim_4368",
+            "attnbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "Z0IrCa4MvOA",
+        "raw_name": "Z0IrCa4MvOA_30.000_40.000.wav",
+        "references": [
+            "Rain is falling continuously",
+            "A stream of water trickling followed by water pouring down a drain",
+            "Water flowing through pipes",
+            "Water flows and splashes",
+            "Water trickling rapidly and draining"
+        ]
+    },
+    {
+        "MM_1": [
+            "Wind is blowing hard over a microphone and water is lapping against a surface",
+            "a woman speaks as food sizzles in a pan",
+            "cos_sim_20275",
+            "attnbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "a woman speaks as food sizzles in a pan",
+            "food sizzles in a pan as a woman speaks and food sizzles in the background",
+            "attnbeam",
+            "attn15",
+            [
+                -1,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_3": [
+            "a woman is speaking while food is frying and frying food in the background followed by a woman talking",
+            "food sizzles in a pan as a woman speaks and food sizzles in the background",
+            "fc15",
+            "attn15",
+            [
+                -1,
+                0,
+                -1,
+                0
+            ]
+        ],
+        "MM_4": [
+            "a woman speaks while food sizzles and a pan sizzles",
+            "a woman is speaking while food is frying and frying food in the background followed by a woman talking",
+            "fc",
+            "fc15",
+            [
+                0,
+                0,
+                1,
+                0
+            ]
+        ],
+        "audio_id": "ek9Fsmm3xqk",
+        "raw_name": "ek9Fsmm3xqk_260.000_270.000.wav",
+        "references": [
+            "Some rowing sounds in water with light wind",
+            "Water splashing and trickling as wind blows into a microphone",
+            "Splashing with wind blowing hard",
+            "Wind blows and water smashes against kayak",
+            "Wind blows as water splashes"
+        ]
+    },
+    {
+        "HC": [
+            "Wind blowing and waves crashing with people speaking",
+            "A child speaking and then an adult speaking",
+            "ground_t_103103",
+            "ground_t_105602",
+            [
+                -1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HI": [
+            "Kids laughing then talking followed by a young man talking as wind blows into a microphone",
+            "Rain is falling continuously",
+            "ground_t_104576",
+            "idx16",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Ocean waves crashing in the distance as young girl talks followed by a young man talking while a group of children laughs in the background and wind blows into a microphone",
+            "an emergency siren is triggered while a vehicle moves",
+            "ground_t_102945",
+            "fc15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Boy talking with a stream running in the background",
+            "a vehicle engine revving up and down",
+            "cos_sim_6405",
+            "attn15",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "glAeihz0NAM",
+        "references": [
+            "Ocean waves crashing in the distance as young girl talks followed by a young man talking while a group of children laughs in the background and wind blows into a microphone",
+            "Wind blowing and waves crashing with people speaking",
+            "Kids laughing then talking followed by a young man talking as wind blows into a microphone",
+            "A child speaking and then an adult speaking",
+            "People talk in the background and the wind is blows gently, and two kids speak in the foreground"
+        ]
+    },
+    {
+        "MM_1": [
+            "a vehicle horn honking followed by a",
+            "a vehicle horn honking followed by a",
+            "rl",
+            "rl15",
+            [
+                0,
+                0,
+                0,
+                0
+            ]
+        ],
+        "MM_2": [
+            "a car horn honks several times",
+            "a vehicle horn honking followed by a",
+            "fc",
+            "rl15",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_3": [
+            "a vehicle engine running followed by a musical horn honking",
+            "a car horn honks several times and then a car horn honks several times",
+            "attnbeam",
+            "fc15",
+            [
+                0,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_4": [
+            "A woman speaking followed by animal whimpering and laughter",
+            "a vehicle engine running followed by a musical horn honking",
+            "cos_sim_23951",
+            "attnbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "S0SQyFXbqF8",
+        "raw_name": "S0SQyFXbqF8_30.000_40.000.wav",
+        "references": [
+            "A child talking then laughing with a man as an animal gurgles followed by a man talking",
+            "A woman speaking and person laughing followed by some gurgling and squeaking",
+            "A child talking then laughing with a man as an animal gurgles",
+            "Young child speaking with giggling",
+            "An animal gurgling followed by a bell clinking as a kid yells and a man laughs then speaks"
+        ]
+    },
+    {
+        "MM_1": [
+            "a goat baaing as footsteps walk on grass",
+            "a goat bleating and a",
+            "attnbeam",
+            "rlbeam",
+            [
+                1,
+                -1,
+                1,
+                1
+            ]
+        ],
+        "MM_2": [
+            "goats bleat nearby and then a goat bleats nearby",
+            "several goats bleat",
+            "fc",
+            "attn15",
+            [
+                1,
+                1,
+                -1,
+                0
+            ]
+        ],
+        "MM_3": [
+            "A small goat cries and man speaks",
+            "goats bleat nearby and then a goat bleats nearby",
+            "cos_sim_22403",
+            "fc",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "MM_4": [
+            "a goat bleating and a",
+            "several goats bleat",
+            "rlbeam",
+            "attn15",
+            [
+                1,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "audio_id": "kHIe4CfaccQ",
+        "raw_name": "kHIe4CfaccQ_40.000_50.000.wav",
+        "references": [
+            "A goat bleats several times",
+            "A goat baaing as footsteps shuffle on foliage followed by a series of licking",
+            "Continuous basing and rustling",
+            "Baby goat bleating with licking sounds",
+            "A goat bleating"
+        ]
+    },
+    {
+        "HC": [
+            "A man speaking as rain lightly falls followed by thunder",
+            "A man speaks as rain pitter-patters and thunder rumbles",
+            "ground_t_103426",
+            "ground_t_103310",
+            [
+                -1,
+                1,
+                -1,
+                1
+            ]
+        ],
+        "HI": [
+            "Man speaking, rain, thunder",
+            "Loud wind noise followed by a car accelerating fast",
+            "ground_t_625",
+            "idx142",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Man speaking, rain, thunder",
+            "a toilet flushes and water drains",
+            "ground_t_625",
+            "fcbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Males talking at a fast pace",
+            "a toilet flushes and water drains",
+            "cos_sim_97373",
+            "attn15",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "-EQByFLFqig",
+        "references": [
+            "A man speaking as rain lightly falls followed by thunder",
+            "A man speaks with rain falling and thunder cracking",
+            "A man speaks as rain pitter-patters and thunder rumbles",
+            "A man speaks as rain falls and distant thunder roars",
+            "Man speaking, rain, thunder"
+        ]
+    },
+    {
+        "HC": [
+            "Squeaking and bouncing followed by a man speaking",
+            "Multiple basketballs bouncing on a hard surface and shoes squeaking as a man shouts in the distance",
+            "ground_t_104382",
+            "ground_t_105260",
+            [
+                -1,
+                -1,
+                -1,
+                -1
+            ]
+        ],
+        "HI": [
+            "Several basketballs bouncing and shoes squeaking on a hardwood surface as a man yells in the distance",
+            "There is a mature male talking to some animals",
+            "ground_t_103332",
+            "idx132",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "HM": [
+            "Several basketballs bouncing and shoes squeaking on a hardwood surface as a man yells in the distance",
+            "a woman is speaking and a baby is crying",
+            "ground_t_103332",
+            "fcbeam",
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "MM_1": [
+            "Basketballs are dribbled and shoes squeak on the floor while people talk",
+            "a baby cries and a woman speaks",
+            "cos_sim_7828",
+            "rlbeam",
+            0,
+            [
+                1,
+                1,
+                1,
+                1
+            ]
+        ],
+        "audio_id": "U90e2P9jy30",
+        "references": [
+            "Squeaking and bouncing followed by a man speaking",
+            "Several basketballs bouncing and shoes squeaking on a hardwood surface as a man yells in the distance",
+            "A man yelling in the background as several basketballs bounce and shoes squeak on a hardwood surface",
+            "A man yelling in the distance as several basketballs bounce and shoes squeak on hardwood floors",
+            "Multiple basketballs bouncing on a hard surface and shoes squeaking as a man shouts in the distance"
+        ]
+    }
+]
