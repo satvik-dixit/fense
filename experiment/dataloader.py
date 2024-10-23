@@ -9,6 +9,12 @@ with open('../dataset/audiocaps_eval.json') as f:
 with open('../dataset/clotho_eval.json') as f:
     anno_clotho = json.load(f)
 
+with open('../dataset/audiocaps_eval_validation_set.json') as f:
+    anno_audiocaps_validation = json.load(f)
+with open('../dataset/clotho_eval_validation_set.json') as f:
+    anno_clotho_validation = json.load(f)
+
+
 def expand_refs(all_refs_text):
     for idx,refs in enumerate(all_refs_text):
         i = 0
@@ -28,7 +34,14 @@ def get_audio_files(dataset='clotho'):
     assert dataset in {'audiocaps', 'clotho'}
     audio_files = []
     
-    anno = anno_clotho if dataset == 'clotho' else anno_audiocaps
+    if dataset=='clotho':
+        anno = anno_clotho
+    elif dataset=='clotho_validation':
+        anno = anno_clotho_validation
+    elif dataset=='audiocaps':
+        anno = anno_audiocaps
+    elif dataset=='audiocaps_validation':
+        anno = anno_audiocaps_validation
     
     for audio in anno:
         audio_files.append(audio['audio_id'])
@@ -43,6 +56,15 @@ def get_former(dataset='clotho'):
     hh_refs_text0 = []
     hh_refs_text1 = []
     hh_audio_files = []
+
+    if dataset=='clotho':
+        anno = anno_clotho
+    elif dataset=='clotho_validation':
+        anno = anno_clotho_validation
+    elif dataset=='audiocaps':
+        anno = anno_audiocaps
+    elif dataset=='audiocaps_validation':
+        anno = anno_audiocaps_validation
 
     anno = anno_clotho if dataset == 'clotho' else anno_audiocaps
 
@@ -83,14 +105,21 @@ def get_former(dataset='clotho'):
     return hh_preds_text0, hh_preds_text1, hh_refs_text0, hh_refs_text1, hh_human_truth, hh_audio_files
 
 def get_latter(dataset='clotho'):
-    assert dataset in {'audiocaps', 'clotho'}
+    # assert dataset in {'audiocaps', 'clotho'}
     mm_human_truth = []
     mm_preds_text0 = []
     mm_preds_text1 = []
     mm_refs_text = []
     mm_audio_files = []
 
-    anno = anno_clotho if dataset == 'clotho' else anno_audiocaps
+    if dataset=='clotho':
+        anno = anno_clotho
+    elif dataset=='clotho_validation':
+        anno = anno_clotho_validation
+    elif dataset=='audiocaps':
+        anno = anno_audiocaps
+    elif dataset=='audiocaps_validation':
+        anno = anno_audiocaps_validation
 
     for audio in tqdm(anno):
         captions = audio["references"]
