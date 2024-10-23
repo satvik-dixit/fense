@@ -190,7 +190,7 @@ def print_accuracy(machine_score, human_score):
 
 
 if __name__ == '__main__':
-    for dataset in ['audiocaps', 'clotho']:
+    for dataset in ['audiocaps_validation', 'clotho_validation']:
         score, score0, score1 = {}, {}, {}
         mm_score, mm_score0, mm_score1 = {}, {}, {}
 
@@ -200,7 +200,7 @@ if __name__ == '__main__':
         print('mm_audio_files', mm_audio_files)
 
         # Iterate through both embedding methods: Sentence-BERT and CLAP and CLAP_audio_caption
-        for metric in ['laion_clap_audio_caption', 'laion-CLAP', 'ms_clap_audio_caption', 'ms-CLAP', 'sentence-bert']:
+        for metric in ['ms_clap_audio_caption', 'ms-CLAP', 'sentence-bert']:
             score0[metric] = get_text_score(hh_preds_text0, hh_refs_text0, metric, audio_files=hh_audio_files, dataset_name=dataset)
             score1[metric] = get_text_score(hh_preds_text1, hh_refs_text1, metric, audio_files=hh_audio_files, dataset_name=dataset)
 
@@ -212,10 +212,10 @@ if __name__ == '__main__':
         mm_score0['clap_combined'] = (mm_score0['ms_clap_audio_caption'] + mm_score0['ms-CLAP'])/2
         mm_score1['clap_combined'] = (mm_score1['ms_clap_audio_caption'] + mm_score1['ms-CLAP'])/2
 
-        score0['laion_clap_combined'] = (score0['laion_clap_audio_caption'] + score0['laion-CLAP'])/2
-        score1['laion_clap_combined'] = (score1['laion_clap_audio_caption'] + score1['laion-CLAP'])/2
-        mm_score0['laion_clap_combined'] = (mm_score0['laion_clap_audio_caption'] + mm_score0['laion-CLAP'])/2
-        mm_score1['laion_clap_combined'] = (mm_score1['laion_clap_audio_caption'] + mm_score1['laion-CLAP'])/2
+        # score0['laion_clap_combined'] = (score0['laion_clap_audio_caption'] + score0['laion-CLAP'])/2
+        # score1['laion_clap_combined'] = (score1['laion_clap_audio_caption'] + score1['laion-CLAP'])/2
+        # mm_score0['laion_clap_combined'] = (mm_score0['laion_clap_audio_caption'] + mm_score0['laion-CLAP'])/2
+        # mm_score1['laion_clap_combined'] = (mm_score1['laion_clap_audio_caption'] + mm_score1['laion-CLAP'])/2
 
 
         total_score0, total_score1, total_score = {}, {}, {}
@@ -273,7 +273,7 @@ if __name__ == '__main__':
         probs1 = np.load('../bert_for_fluency/cache/probs1_alltrain_{}.npy'.format(dataset))
 
         coef = 0.9
-        thresholds = np.concatenate([np.arange(0.0, 0.95, 0.05), np.arange(0.95, 1.01, 0.01)])
+        thresholds = np.arange(0.90, 1.00, 0.01)
 
         results = []  # List to store rows
 
@@ -308,8 +308,8 @@ if __name__ == '__main__':
         results_df.to_csv(f'fluency_varied_thresholds_{dataset}.csv', index=False)
 
         # Part 2: Varying coef while keeping threshold constant at 0.95
-        coefs = np.concatenate([np.arange(0.0, 0.95, 0.05), np.arange(0.95, 1.01, 0.01)])
-        constant_threshold = 0.95  # Keep threshold fixed
+        coefs = np.arange(0.0, 1.0, 0.1)
+        constant_threshold = 0.90  # Keep threshold fixed
 
         results_coef = []  # List to store rows
 
