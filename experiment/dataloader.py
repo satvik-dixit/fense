@@ -9,9 +9,9 @@ with open('../dataset/audiocaps_eval.json') as f:
 with open('../dataset/clotho_eval.json') as f:
     anno_clotho = json.load(f)
 
-with open('../dataset/audiocaps_eval_validation_set.json') as f:
+with open('../dataset/audiocaps_eval_validation.json') as f:
     anno_audiocaps_validation = json.load(f)
-with open('../dataset/clotho_eval_validation_set.json') as f:
+with open('../dataset/clotho_eval_validation.json') as f:
     anno_clotho_validation = json.load(f)
 
 
