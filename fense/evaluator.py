@@ -10,6 +10,7 @@ from functools import lru_cache
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer
 from transformers import logging as trf_logging
+import transformers
 
 PRETRAIN_ECHECKERS = {
     'echecker_clotho_audiocaps_base': ("https://github.com/blmoistawinde/fense/releases/download/V0.1/echecker_clotho_audiocaps_base.ckpt", "1a719f090af70614bbdb9f9437530b7e133c48cfa4a58d964de0d47fc974a2fa"),
